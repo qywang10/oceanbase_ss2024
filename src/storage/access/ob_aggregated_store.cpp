@@ -451,9 +451,10 @@ int ObAggregatedStore::fill_count(const int64_t row_count)
   } else if (row_count < 0) {
     ret = OB_INVALID_ARGUMENT;
     STORAGE_LOG(WARN, "Invalid argument to fill count", K(ret), K(row_count));
-  } else {
-    LOG_DEBUG("debug to fill row count", K(ret), K(row_count));
-  }
+  } 
+  // else {
+  //   LOG_DEBUG("debug to fill row count", K(ret), K(row_count));
+  // }
   return ret;
 }
 
